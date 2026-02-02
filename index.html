@@ -11,30 +11,22 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .casino-card:hover { transform: translateY(-4px); transition: all 0.3s ease; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-        .sticky-header { backdrop-filter: blur(8px); background-color: rgba(15,23,42,0.9); }
+        .sticky-header { backdrop-filter: blur(8px); background-color: rgba(15, 23, 42, 0.9); }
         .gradient-bg { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px) } 50% { transform: translateY(-10px) } 100% { transform: translateY(0px) } }
         .custom-scrollbar::-webkit-scrollbar { height: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
         .prose h2 { font-weight: 900; font-size: 1.875rem; margin-top: 2rem; margin-bottom: 1rem; color: #0f172a; }
         .prose h3 { font-weight: 700; font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1e293b; }
         .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #475569; }
-        .prose ul { margin-bottom: 1.25rem; list-style-type: none; }
-        .prose li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #475569; }
-        .prose li::before { content: "→"; position: absolute; left: 0; color: #f97316; font-weight: bold; }
+        .prose ul { margin-bottom: 1.25rem; list-style-type: disc; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; color: #475569; }
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#f97316',
-                        secondary: '#4f46e5',
-                        dark: '#0f172a',
-                        card: '#ffffff'
-                    }
+                    colors: { primary: '#f97316', secondary: '#4f46e5', dark: '#0f172a', card: '#ffffff' }
                 }
             }
         }
@@ -49,7 +41,7 @@
           "name": "Wat is een 5 euro Deposit casino?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Een 5 euro Deposit casino is een online casino waar spelers kunnen beginnen met een minimale storting van €5. Dit type casino richt zich op spelers die met een klein budget willen spelen."
+            "text": "Een 5 euro Deposit casino is een online casino waar spelers kunnen beginnen met een minimale storting van €5. Dit type casino richt zich op spelers die met een klein budget willen spelen. Het biedt een laagdrempelige manier om een platform te testen zonder direct veel geld te riskeren."
           }
         },
         {
@@ -57,7 +49,7 @@
           "name": "Krijg ik een bonus bij een storting van €5?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bij een storting van 5 euro kan soms een bonus beschikbaar zijn, maar dit is niet altijd het geval. Het bonusbedrag is meestal beperkt en de voorwaarden kunnen strenger zijn."
+            "text": "Bij een storting van 5 euro kan soms een bonus beschikbaar zijn, maar dit is niet altijd het geval. Het bonusbedrag is meestal beperkt en de voorwaarden kunnen strenger zijn dan bij hogere stortingen. Het controleren van de bonusvoorwaarden vooraf blijft daarom belangrijk."
           }
         },
         {
@@ -65,7 +57,39 @@
           "name": "Welke spellen kan ik spelen met €5?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Met €5 kunnen Nederlandse spelers meestal slots met lage inzet spelen en soms geselecteerde tafel- of live spellen."
+            "text": "Met €5 kunnen Nederlandse spelers meestal slots met lage inzet spelen en soms geselecteerde tafel- of live spellen. Niet elk spel is geschikt voor een klein saldo. Spellen met een lage minimale inzet bieden doorgaans de meeste speelduur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Zijn 5 euro casino’s legaal in Nederland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alleen legale casino’s met een Nederlandse vergunning mogen zich officieel richten op spelers in Nederland. Casino’s zonder Nederlandse licentie vallen onder buitenlandse regelgeving. Dit kan gevolgen hebben voor toezicht en spelersbescherming."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe snel kan ik uitbetalen na een kleine storting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uitbetalen is vaak pas mogelijk wanneer het minimale opnamebedrag is bereikt. Daarnaast moet het account volledig zijn geverifieerd voordat een uitbetaling wordt verwerkt. De verwerkingstijd verschilt per casino en betaalmethode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is een minimale storting casino geschikt voor beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Een minimale storting casino is geschikt voor beginners die eerst ervaring willen opdoen. Het financiële risico blijft beperkt en het platform kan rustig worden verkend. Tegelijk blijven duidelijke regels en zelfcontrole belangrijk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan ik meerdere keren €5 storten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bij de meeste casino’s is het toegestaan om meerdere keren €5 te storten. Dit gebeurt binnen de vastgestelde stortings- en speellimieten van het account. Het is verstandig om deze limieten vooraf te controleren."
           }
         }
       ]
@@ -87,7 +111,7 @@
             <div class="flex items-center gap-4">
                 <button class="p-2 hover:bg-slate-800 rounded-full"><i data-lucide="search" class="w-5 h-5"></i></button>
                 <button id="mobile-menu-btn" class="md:hidden p-2 hover:bg-slate-800 rounded-full"><i data-lucide="menu" class="w-6 h-6"></i></button>
-                <button class="hidden md:block bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-all">JOIN NU</button>
+                <button class="hidden md:block bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-all">MELD JE AAN</button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-slate-800 p-4 space-y-4">
@@ -123,9 +147,9 @@
             <div class="bg-white rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 custom-scrollbar">
                     <button class="whitespace-nowrap bg-primary text-white px-6 py-2 rounded-xl font-bold flex items-center gap-2"><i data-lucide="star" class="w-4 h-4"></i> Top Rated</button>
-                    <button class="whitespace-nowrap bg-slate-100 hover:bg-slate-200 px-6 py-2 rounded-xl font-bold transition-colors">€1 Deposit</button>
                     <button class="whitespace-nowrap bg-slate-100 hover:bg-slate-200 px-6 py-2 rounded-xl font-bold transition-colors">€5 Deposit</button>
-                    <button class="whitespace-nowrap bg-slate-100 hover:bg-slate-200 px-6 py-2 rounded-xl font-bold transition-colors">Nieuwe Casino's</button>
+                    <button class="whitespace-nowrap bg-slate-100 hover:bg-slate-200 px-6 py-2 rounded-xl font-bold transition-colors">Nieuwe Casinos</button>
+                    <button class="whitespace-nowrap bg-slate-100 hover:bg-slate-200 px-6 py-2 rounded-xl font-bold transition-colors">Snel Uitbetalend</button>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
                     <i data-lucide="info" class="w-4 h-4"></i>
@@ -136,14 +160,14 @@
 
         <section class="container mx-auto px-4 mb-12">
             <div class="grid gap-6">
-                <!-- Casino Card 1 -->
+                <!-- Casino Card 1: Goldbet -->
                 <div class="casino-card bg-white border border-slate-200 rounded-3xl p-6 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 bg-primary text-white text-xs font-black px-4 py-1 rounded-br-xl uppercase tracking-widest">#1 Beste Keuze</div>
+                    <div class="absolute top-0 left-0 bg-primary text-white text-xs font-black px-4 py-1 rounded-br-xl uppercase tracking-widest">#1 Best Choice</div>
                     <div class="w-40 h-40 flex-shrink-0 bg-slate-50 rounded-2xl p-4 flex items-center justify-center border border-slate-100 shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=200&h=200&fit=crop" class="w-full h-auto rounded-lg" alt="Casino Logo">
+                        <div class="text-2xl font-black text-slate-800">GOLDBET</div>
                     </div>
                     <div class="flex-grow text-center lg:text-left">
-                        <h3 class="text-2xl font-black mb-2">ThunderPick Casino</h3>
+                        <h3 class="text-2xl font-black mb-2">Goldbet Casino</h3>
                         <div class="flex items-center justify-center lg:justify-start gap-1 mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
@@ -152,37 +176,37 @@
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <span class="ml-2 text-slate-500 font-bold">(9.8/10)</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> €5 Minimale Storting</div>
-                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Directe Uitbetalingen</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% Stortingsbonus</div>
+                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Snelle Uitbetalingen</div>
                         </div>
                     </div>
                     <div class="flex flex-col items-center gap-4 min-w-[200px]">
                         <div class="text-center">
-                            <div class="text-3xl font-black text-slate-900">€1.000</div>
-                            <div class="text-xs uppercase text-slate-500 font-bold tracking-widest">Welkomstpakket</div>
+                            <div class="text-3xl font-black text-slate-900">€5 MIN</div>
+                            <div class="text-xs uppercase text-slate-500 font-bold tracking-widest">Stortingslimiet</div>
                         </div>
-                        <a href="#" class="w-full bg-primary hover:bg-orange-600 text-white text-center py-4 rounded-2xl font-black text-lg shadow-lg shadow-orange-200 transition-all">SPEEL NU</a>
-                        <p class="text-[10px] text-slate-400 italic">*T&Cs Apply. 18+ Only.</p>
+                        <a href="https://tinyurl.com/2mwskb86" rel="nofollow" class="w-full bg-primary hover:bg-orange-600 text-white text-center py-4 rounded-2xl font-black text-lg shadow-lg shadow-orange-200 transition-all uppercase">Speel Nu</a>
+                        <p class="text-[10px] text-slate-400 italic">*T&Cs Apply. 18+ Alleen.</p>
                     </div>
                 </div>
 
-                <!-- Casino Card 2 -->
+                <!-- Casino Card 2: Newlucky -->
                 <div class="casino-card bg-white border border-slate-200 rounded-3xl p-6 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
                     <div class="w-40 h-40 flex-shrink-0 bg-slate-50 rounded-2xl p-4 flex items-center justify-center border border-slate-100 shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1518893883800-45cd0954574b?w=200&h=200&fit=crop" class="w-full h-auto rounded-lg" alt="Casino Logo">
+                        <div class="text-2xl font-black text-slate-800 text-center">NEW LUCKY</div>
                     </div>
                     <div class="flex-grow text-center lg:text-left">
-                        <h3 class="text-2xl font-black mb-2">LuckyRed Casino</h3>
+                        <h3 class="text-2xl font-black mb-2">Newlucky Casino</h3>
                         <div class="flex items-center justify-center lg:justify-start gap-1 mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-4 h-4 text-slate-300"></i>
-                            <span class="ml-2 text-slate-500 font-bold">(8.5/10)</span>
+                            <span class="ml-2 text-slate-500 font-bold">(8.9/10)</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                             <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 400% Match Bonus</div>
                             <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Crypto Geaccepteerd</div>
                         </div>
@@ -192,20 +216,51 @@
                             <span class="text-xs font-bold font-mono">LUCKY5</span>
                             <button onclick="copyCode(this)" class="text-[10px] bg-slate-800 text-white px-2 py-1 rounded uppercase font-bold">Copy</button>
                         </div>
-                        <a href="#" class="w-full bg-secondary hover:bg-indigo-700 text-white text-center py-4 rounded-2xl font-black text-lg shadow-lg shadow-indigo-200 transition-all">BEZOEK SITE</a>
-                        <p class="text-[10px] text-slate-400 italic">*Min deposit €5. New players only.</p>
+                        <a href="https://tinyurl.com/2mwskb86" rel="nofollow" class="w-full bg-secondary hover:bg-indigo-700 text-white text-center py-4 rounded-2xl font-black text-lg shadow-lg shadow-indigo-200 transition-all uppercase">Bezoek Site</a>
+                        <p class="text-[10px] text-slate-400 italic">*Min storting €5. Nieuwe spelers.</p>
+                    </div>
+                </div>
+
+                <!-- Casino Card 3: Lizaro -->
+                <div class="casino-card bg-white border border-slate-200 rounded-3xl p-6 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
+                    <div class="w-40 h-40 flex-shrink-0 bg-slate-50 rounded-2xl p-4 flex items-center justify-center border border-slate-100 shadow-inner">
+                        <div class="text-2xl font-black text-slate-800">LIZARO</div>
+                    </div>
+                    <div class="flex-grow text-center lg:text-left">
+                        <h3 class="text-2xl font-black mb-2">Lizaro Casino</h3>
+                        <div class="flex items-center justify-center lg:justify-start gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary text-primary"></i>
+                            <span class="ml-2 text-slate-500 font-bold">(9.2/10)</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Exclusieve Promoties</div>
+                            <div class="flex items-center gap-2 text-green-600 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Mobiel Vriendelijk</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 min-w-[200px]">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-slate-900">€5 START</div>
+                            <div class="text-xs uppercase text-slate-500 font-bold tracking-widest">Welkomstpakket</div>
+                        </div>
+                        <a href="https://tinyurl.com/2mwskb86" rel="nofollow" class="w-full bg-primary hover:bg-orange-600 text-white text-center py-4 rounded-2xl font-black text-lg shadow-lg shadow-orange-200 transition-all uppercase">Speel Nu</a>
+                        <p class="text-[10px] text-slate-400 italic">*T&Cs Apply. 18+</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="container mx-auto px-4 mb-20">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 prose max-w-none">
+        <section class="container mx-auto px-4 py-12 bg-white rounded-3xl shadow-sm border border-slate-100 mb-20">
+            <div class="max-w-4xl mx-auto prose">
                 <p>Voor nieuwe spelers en voor wie bewust met een laag bedrag wil beginnen, staat het beperken van financieel risico centraal. Tegelijk bestaan er vragen over duidelijke voorwaarden, veiligheid en de manier waarop uitbetalingen verlopen bij een euro Deposit casino. Ook leeft onzekerheid over bonussen en inzetvereisten bij een euro Deposit. Het artikel erkent deze zorgen, zonder ze vooruit te lopen of te beoordelen. De inhoud is uitleggevend en onafhankelijk opgezet, bedoeld om Nederlandse spelers te helpen beter geïnformeerde keuzes te maken, niet als promotie of juridisch advies.</p>
 
                 <h2>Wat is een 5 euro Deposit casino?</h2>
                 <p>Een 5 euro Deposit casino is een online casino waar spelers kunnen beginnen met een minimale storting van €5 in plaats van een hoger instapbedrag. Dit type euro casino richt zich op gebruikers die met een kleine storting willen kennismaken met een platform. Het doel is spelen met lage inzet, zonder direct een groot bedrag te riskeren.</p>
-                <p>Deze gids legt uit hoe een euro storting in de praktijk werkt, wat spelers met €5 kunnen doen en welke beperkingen daarbij horen. Veel vragen gaan over onduidelijke bonusvoorwaarden, beperkte speelduur en het risico dat het saldo snel verdwijnt. Ook speelt onzekerheid over de betrouwbaarheid en legaliteit van een Deposit casino met een laag minimum stortingsbedrag in Nederland. Daarnaast wordt aandacht besteed aan buitenlandse aanbieders en casino’s zonder CRUKS, uitsluitend vanuit een informatief perspectief. De verschillen in regelgeving en bescherming worden benoemd, zonder promotie of aanbeveling.</p>
+                <p>Deze gids legt uit hoe een euro storting in de praktijk werkt, wat spelers met €5 kunnen doen en welke beperkingen daarbij horen. Veel vragen gaan over onduidelijke bonusvoorwaarden, beperkte speelduur en het risico dat het saldo snel verdwijnt. Ook speelt onzekerheid over de betrouwbaarheid en legaliteit van een Deposit casino met een laag minimum stortingsbedrag in Nederland.</p>
+                <p>Daarnaast wordt aandacht besteed aan buitenlandse aanbieders en casino’s zonder CRUKS, uitsluitend vanuit een informatief perspectief. De verschillen in regelgeving en bescherming worden benoemd, zonder promotie of aanbeveling.</p>
                 
                 <h3>Kernkenmerken van een 5 euro Deposit casino:</h3>
                 <ul>
@@ -244,48 +299,53 @@
                 </ul>
 
                 <h3>Stap 1: Account aanmaken bij een 5 euro casino</h3>
-                <p>De eerste stap is het account aanmaken bij een online casino dat een lage storting toestaat. Tijdens het account registreren worden persoonlijke gegevens gevraagd, zoals naam, geboortedatum en contactinformatie. Deze gegevens zijn later nodig voor identiteit verificatie en uitbetalingen. Onjuiste informatie kan vertragingen of blokkades veroorzaken. Nieuwe spelers maken vaak zorgen over privacy en controle van gegevens. Daarom is het verstandig vooraf de licentie-informatie, algemene voorwaarden en de pagina over verantwoord spelen te bekijken. Ook het instellen van spelerslimieten maakt standaard deel uit van het registratieproces.</p>
+                <p>De eerste stap is het account aanmaken bij een online casino dat een lage storting toestaat. Tijdens het account registreren worden persoonlijke gegevens gevraagd, zoals naam, geboortedatum en contactinformatie. Deze gegevens zijn later nodig voor identiteit verificatie en uitbetalingen. Onjuiste informatie kan vertragingen of blokkades veroorzaken.</p>
+                <p>Nieuwe spelers maken vaak zorgen over privacy and controle van gegevens. Daarom is het verstandig vooraf de licentie-informatie, algemene voorwaarden en de pagina over verantwoord spelen te bekijken. Ook het instellen van spelerslimieten maakt standaard deel uit van het registratieproces.</p>
 
                 <h3>Stap 2: Een storting van €5 doen</h3>
-                <p>Na het registreren kan een storting worden uitgevoerd via de kassapagina van het casino. Daar wordt de gekozen betaalmethode geselecteerd en het bedrag van 5 euro ingevoerd, of het dichtstbijzijnde toegestane minimum. Vervolgens wordt de Deposit bevestigd volgens de stappen van de aanbieder. Niet elke methode ondersteunt een storting van €5. Bij sommige kaarten of een prepaid kaart geldt een hoger minimum of extra voorwaarden. Ook kunnen transactiekosten, mislukte stortingen of vertragingen voorkomen. Het controleren van minima en mogelijke kosten per betaalmethode helpt om verrassingen te voorkomen.</p>
+                <p>Na het registreren kan een storting worden uitgevoerd via de kassapagina van het casino. Daar wordt de gekozen betaalmethode geselecteerd en het bedrag van 5 euro ingevoerd, of het dichtstbijzijnde toegestane minimum. Vervolgens wordt de Deposit bevestigd volgens de stappen van de aanbieder.</p>
+                <p>Niet elke methode ondersteunt een storting van €5. Bij sommige kaarten of een prepaid kaart geldt een hoger minimum of extra voorwaarden. Ook kunnen transactiekosten, mislukte stortingen of vertragingen voorkomen. Het controleren van minima en mogelijke kosten per betaalmethode helpt om verrassingen te voorkomen.</p>
 
                 <h3>Stap 3: Welkomstbonus activeren met €5 storting</h3>
-                <p>Veel casino’s bieden een welkomstbonus die soms al geldt bij een storting van €5. In andere gevallen is een hoger minimum vereist, zoals €10 of €20. Daarom is het belangrijk om vooraf de bonusvoorwaarden te controleren en te bekijken of een bonus code nodig is. Sommige acties vereisen een expliciete opt-in om de bonus te activeren. Bij een kleine storting blijven de beschikbare bonussen meestal beperkt. Wie een welkomstbonus krijgen verwacht met hoge bedragen, kan teleurgesteld raken. Realistische opties zijn een kleine matchbonus of enkele free spins, die na het bonus claimen onder duidelijke voorwaarden worden gespeeld.</p>
+                <p>Veel casino’s bieden een welkomstbonus die soms al geldt bij een storting van €5. In andere gevallen is een hoger minimum vereist, zoals €10 of €20. Daarom is het belangrijk om vooraf de bonusvoorwaarden te controleren en te bekijken of een bonuscode nodig is. Sommige acties vereisen een expliciete opt-in om de bonus te activeren.</p>
+                <p>Bij een kleine storting blijven de beschikbare bonussen meestal beperkt. Wie een welkomstbonus krijgen verwacht met hoge bedragen, kan teleurgesteld raken. Realistische opties zijn een kleine matchbonus of enkele free spins, die na het bonus claimen onder duidelijke voorwaarden worden gespeeld.</p>
 
                 <h3>Stap 4: Spelen met een lage inzet</h3>
-                <p>Spelen met €5 vraagt om bewuste keuzes en lage inzetten. Spellen met een minimale inzet per ronde maken het mogelijk om langer te spelen en het saldo beter te spreiden. Vooral slots en andere spellen die de inzet duidelijk tonen, zijn geschikt voor kleine inzetten. Hoge inzettafels vergroten het risico dat het budget snel verdwijnt. Eenvoudig bankroll management helpt om controle te houden. Met €5 kunnen bijvoorbeeld tientallen spins worden gespeeld op lage inzet, afhankelijk van het spel. Automatisch spelen op hogere inzetten vergroot de kans op snel verlies, zelfs bij favoriete spellen.</p>
+                <p>Spelen met €5 vraagt om bewuste keuzes en lage inzetten. Spellen met een minimale inzet per ronde maken het mogelijk om langer te spelen en het saldo beter te spreiden. Vooral slots en andere spellen die de inzet duidelijk tonen, zijn geschikt voor kleine inzetten. Hoge inzettafels vergroten het risico dat het budget snel verdwijnt.</p>
+                <p>Eenvoudig bankroll management helpt om controle te houden. Met €5 kunnen bijvoorbeeld tientallen spins worden gespeeld op lage inzet, afhankelijk van het spel. Automatisch spelen op hogere inzetten vergroot de kans op snel verlies, zelfs bij favoriete spellen.</p>
 
                 <h2>Uitbetalingen bij een 5 euro casino</h2>
                 <p>Bij een 5 euro casino gelden voor uitbetalingen dezelfde basisprincipes als bij andere online casino’s, maar met specifieke aandachtspunten door de kleine startstorting. Spelers die beginnen met een euro Deposit merken vaak dat de minimale opname hoger ligt dan het oorspronkelijke bedrag. In de praktijk hanteren meeste casino’s een ondergrens van ongeveer €20 tot €50 voordat een uitbetaling mogelijk is.</p>
-                
-                <div class="overflow-x-auto mb-8">
-                    <table class="min-w-full bg-white border border-slate-200 rounded-xl overflow-hidden">
-                        <thead class="bg-slate-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b">Aspect</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b">Toelichting</th>
+                <p>Daarnaast is accountverificatie een vast onderdeel van het proces. Zonder bevestiging van identiteit en betaalgegevens wordt geen uitbetaling verwerkt, ongeacht de hoogte van de storting of Deposit. Dit zorgt soms voor onzekerheid bij spelers die bang zijn dat winst niet wordt uitbetaald. Ook de verwerkingstijd verschilt per aanbieder en betaalmethode, waardoor snelle uitbetalingen niet in alle gevallen vanzelfsprekend zijn.</p>
+
+                <div class="overflow-x-auto my-8">
+                    <table class="w-full text-left border-collapse border border-slate-200">
+                        <thead>
+                            <tr class="bg-slate-100">
+                                <th class="p-3 border border-slate-200 font-bold">Aspect</th>
+                                <th class="p-3 border border-slate-200 font-bold">Toelichting</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-200">
+                        <tbody>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Minimale opname</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Vaak hoger dan €5, meestal €20–€50</td>
+                                <td class="p-3 border border-slate-200">Minimale opname</td>
+                                <td class="p-3 border border-slate-200">Vaak hoger dan €5, meestal €20–€50</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200">Verificatie</td>
+                                <td class="p-3 border border-slate-200">Identiteitscontrole verplicht vóór uitbetaling</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Verificatie</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Identiteitscontrole verplicht vóór uitbetaling</td>
+                                <td class="p-3 border border-slate-200">Verwerkingstijd</td>
+                                <td class="p-3 border border-slate-200">Afhankelijk van methode en interne controles</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200">Snelle uitbetalingen</td>
+                                <td class="p-3 border border-slate-200">Niet gegarandeerd bij elk casino</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Verwerkingstijd</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Afhankelijk van methode en interne controles</td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Snelle uitbetalingen</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Niet gegarandeerd bij elk casino</td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Resterend saldo</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Can worden opgespaard voor later gebruik</td>
+                                <td class="p-3 border border-slate-200">Resterend saldo</td>
+                                <td class="p-3 border border-slate-200">Can worden opgespaard voor later gebruik</td>
                             </tr>
                         </tbody>
                     </table>
@@ -293,6 +353,7 @@
 
                 <h2>Hoe een betrouwbaar €5 storting casino te herkennen</h2>
                 <p>Een betrouwbaar €5 storting casino voldoet aan een aantal duidelijke basiscriteria. Legale casino’s beschikken over een geldige Nederlandse of internationale licentie en communiceren daar transparant over. Bij Nederlandse casino’s zijn voorwaarden rond bonussen, inzetten en uitbetalingen duidelijk geformuleerd. Dit verkleint het risico op misverstanden en onverwachte beperkingen.</p>
+                <p>Ook de algemene reputatie speelt een rol. Casino’s met een goede reputatie werken vaak samen met bekende aanbieders, gebruiken veilige betaalmethoden en bieden toegankelijke klantenservice. Aanbieders zonder licentie of met onrealistische bonussen vergroten het risico op problemen en worden beter vermeden.</p>
                 
                 <h3>Checklist voor betrouwbaarheid:</h3>
                 <ul>
@@ -305,35 +366,35 @@
 
                 <h2>5 euro storting casino bonussen</h2>
                 <p>Bij een storting van €5 zijn bonussen vaak beschikbaar, maar meestal in een beperkter formaat dan bij hogere bedragen. Het gaat vooral om kleine stortingsbonussen, free spins of eenvoudige cashback-acties. Een welkomstbonus kan soms al geldt bij een lage storting, terwijl andere casino’s aantrekkelijkere aanbiedingen koppelen aan een hoger bedrag. Toch blijven er ook opties bestaan voor spelers met een klein budget.</p>
-                
-                <div class="overflow-x-auto mb-8">
-                    <table class="min-w-full bg-white border border-slate-200 rounded-xl overflow-hidden">
-                        <thead class="bg-slate-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b">Type bonus</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b">Korte toelichting</th>
+
+                <div class="overflow-x-auto my-8">
+                    <table class="w-full text-left border-collapse border border-slate-200">
+                        <thead>
+                            <tr class="bg-slate-100">
+                                <th class="p-3 border border-slate-200 font-bold">Type bonus</th>
+                                <th class="p-3 border border-slate-200 font-bold">Korte toelichting</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-200">
+                        <tbody>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Kleine stortingsbonus</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Matchbonus met beperkt bonusbedrag</td>
+                                <td class="p-3 border border-slate-200">Kleine stortingsbonus</td>
+                                <td class="p-3 border border-slate-200">Matchbonus met beperkt bonusbedrag</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200">Free spins</td>
+                                <td class="p-3 border border-slate-200">Gratis spins op geselecteerde gokkasten</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Free spins</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Gratis spins op geselecteerde gokkasten</td>
+                                <td class="p-3 border border-slate-200">Reload bonus</td>
+                                <td class="p-3 border border-slate-200">Extra bonus bij een volgende storting</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200">Cashback</td>
+                                <td class="p-3 border border-slate-200">Teruggave van een deel van het verlies</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Reload bonus</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Extra bonus bij een volgende storting</td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Cashback</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Teruggave van een deel van het verlies</td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-bold text-slate-900">Promoties beschikbaar</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Tijdelijke acties met aanvullende voorwaarden</td>
+                                <td class="p-3 border border-slate-200">Promoties beschikbaar</td>
+                                <td class="p-3 border border-slate-200">Tijdelijke acties met aanvullende voorwaarden</td>
                             </tr>
                         </tbody>
                     </table>
@@ -344,10 +405,12 @@
                 <p>Een eenvoudig voorbeeld verduidelijkt dit. Bij een bonus van €5 met een inzetvereiste van 30x moet in totaal €150 worden ingezet. Bij beperkte bonussen is de maximale winst vaak gemaximeerd, wat invloed heeft op het resultaat. Onvoldoende kennis van deze voorwaarden kan ertoe leiden dat winsten vervallen.</p>
 
                 <h2>Spelaanbod in een 5 euro online casino</h2>
-                <p>Een 5 euro online casino biedt doorgaans een breed spelaanbod met verschillende categorieën. Spelers vinden er gokkasten, tafelspellen en vaak ook een live casino. Soms zijn ook sportweddenschappen beschikbaar, al zijn deze minder geschikt voor een klein budget. De zorg dat €5 slechts toegang geeft tot enkele spellen is meestal ongegrond. Veel platforms bieden beschikbare spellen in uiteenlopende varianten, waaronder slots met lage inzet en zelfs duizenden slots in totaal. Met een klein saldo blijft het belangrijk om bewust te kiezen voor spellen die passen bij beperkte inzetten en een langere speelduur mogelijk maken.</p>
+                <p>Een 5 euro online casino biedt doorgaans een breed spelaanbod met verschillende categorieën. Spelers vinden er gokkasten, tafelspellen en vaak ook een live casino. Soms zijn ook sportweddenschappen beschikbaar, al zijn deze minder geschikt voor een klein budget.</p>
+                <p>De zorg dat €5 slechts toegang geeft tot enkele spellen is meestal ongegrond. Veel platforms bieden beschikbare spellen in uiteenlopende varianten, waaronder slots met lage inzet en zelfs duizenden slots in totaal. Met een klein saldo blijft het belangrijk om bewust te kiezen voor spellen die passen bij beperkte inzetten en een langere speelduur mogelijk maken.</p>
 
                 <h2>Welke spellen zijn ideaal voor een storting van €5?</h2>
                 <p>Bij een storting van €5 draait de keuze van spellen om balans tussen speelduur en risico. Spellen met lage inzetten en een minimale inzet per ronde maken het mogelijk om het saldo langer te gebruiken. Vooral klassieke gokkasten en slots met lage volatiliteit zorgen voor meer speelmomenten en minder grote schommelingen. Dit vergroot de speelduur zonder dat het budget snel verdwijnt.</p>
+                <p>Spellen met hoge volatiliteit of tafels met hogere limieten kunnen een klein saldo snel uitputten. Wie spanning zoekt maar toch controle wil houden, kiest beter voor favoriete spellen met duidelijke inzetstructuren en beperkte variatie.</p>
                 
                 <h3>Spelcategorieën geschikt voor kleine budgetten:</h3>
                 <ul>
@@ -357,4 +420,139 @@
                 </ul>
 
                 <h2>Beste betaalmethoden voor een storting van 5 euro</h2>
-                <p>Voor een storting van €5 maken casino’s in Nederland gebruik van verschillende betaalmethoden. Veelgebruikte opties zijn bankoverschrijving, kaarten, e-wallets en soms een prepaid kaart of mobiele betaling. Niet elke methode ondersteunt een lage minimum storting, waardoor vooraf controleren noodzakelijk blijft. E-wallets en vormen van instant banking bieden vaak een snelle storting en directe bevestiging. Bij kaarten of overschrijvingen kan het minimum hoger liggen of extra verwerkingstijd gel
+                <p>Voor een storting van €5 maken casino’s in Nederland gebruik van verschillende betaalmethoden. Veelgebruikte opties zijn bankoverschrijving, kaarten, e-wallets en soms een prepaid kaart of mobiele betaling. Niet elke methode ondersteunt een lage minimum storting, waardoor vooraf controleren noodzakelijk blijft.</p>
+                <p>E-wallets en vormen van instant banking bieden vaak een snelle storting en directe bevestiging. Bij kaarten of overschrijvingen kan het minimum hoger liggen of extra verwerkingstijd gelden. Ook onverwachte kosten kunnen voorkomen bij kleine bedragen. Door per methode het minimum, de valuta en eventuele fees te controleren, worden geweigerde stortingen en verrassingen vermeden.</p>
+
+                <h2>Limieten en kosten bij kleine stortingen</h2>
+                <p>Een kleine storting kan in sommige gevallen leiden tot hogere relatieve kosten. Denk aan transactiekosten, valutaconversie of beperkingen zoals geen toegang tot bonussen of bepaalde betaalmethoden. Bij een laag minimum stortingsbedrag kan zelfs een kleine fee een merkbaar deel van €5 innemen.</p>
+                <p>Daarom is het verstandig om te controleren of een betaalmethode zonder kosten beschikbaar is. In sommige situaties kan een iets hogere storting voordeliger zijn, omdat vaste kosten dan minder zwaar doorwegen. Ook stortingslimiet en uitbetalingslimiet verschillen per aanbieder en verdienen aandacht.</p>
+
+                <h2>5 euro Deposit casino buitenland en zonder CRUKS</h2>
+                <p>Een 5 euro Deposit casino buitenland of Deposit casino zonder CRUKS is een aanbieder die buiten Nederland is gevestigd en niet is aangesloten op het CRUKS-systeem. Deze buitenlandse casino’s werken onder buitenlandse licenties en vallen onder andere wetgeving dan Nederlandse aanbieders. Daardoor gelden andere regels voor spelersbescherming, toezicht en klachtenafhandeling.</p>
+                <p>Sommige spelers zoeken bewust naar buitenlandse aanbieders, bijvoorbeeld na een eerdere zelfuitsluiting of vanwege toegang tot lagere stortingsbedragen. Tegelijk brengt spelen bij een casino zonder CRUKS duidelijke risico’s met zich mee. De bescherming is vaak beperkter en geschillen kunnen lastiger worden opgelost. Dit spanningsveld tussen toegankelijkheid en veiligheid vraagt om een bewuste afweging, waarbij verantwoord spelen en inzicht in de geldende regels centraal blijven staan.</p>
+
+                <h2>Veiligheid en juridische aandachtspunten</h2>
+                <p>Bij spelen in een buitenlands casino is het belangrijk om te controleren onder welke buitenlandse licenties de aanbieder opereert. Deze licenties bepalen welk toezicht geldt en welke bescherming spelers hebben bij conflicten of uitbetalingen. Het ontbreken van een Nederlandse licentie kan betekenen dat regels anders worden toegepast dan bij legale casino’s in Nederland.</p>
+                <p>De vrees om winsten niet uitbetaald te krijgen is begrijpelijk bij minder streng gereguleerde aanbieders. Daarom blijft het noodzakelijk om voorwaarden, klachtenprocedures en beschikbare bescherming vooraf te beoordelen. Deze uitleg is informatief en vormt geen juridisch advies. Verantwoord kiezen en bewust spelen blijven essentieel.</p>
+
+                <h2>Mobiele 5 euro Deposit casino’s</h2>
+                <p>De meeste moderne casino’s ondersteunen mobiel casino spelen via een browser of een casino app. Een storting van €5 werkt op mobiele apparaten hetzelfde als op desktop, inclusief registratie en mobiel storten. Spelers kunnen hierdoor ook onderweg met een klein budget spelen.</p>
+                <p>Toch spelen praktische zorgen mee, zoals overzicht op een klein scherm en de veiligheid van openbare wifi-netwerken. Een gebruiksvriendelijke interface en stabiele laadtijden zijn daarbij belangrijk. Het is aan te raden om alleen beveiligde verbindingen te gebruiken en te controleren of live spellen en andere games soepel functioneren bij lage inzetten op smartphones.</p>
+
+                <h2>Alternatieven voor een 5 euro storting</h2>
+                <p>Niet iedere speler vindt €5 voldoende om het spel goed te ervaren. In dat geval kan een hogere storting, zoals €10, zorgen voor ruimere bonussen en meer speelruimte, terwijl het risico nog beperkt blijft. Een grote storting biedt vaak extra voordelen, maar brengt ook een hoger financieel risico met zich mee.</p>
+                <p>Een andere mogelijkheid is spelen in de gratis demo-modus, waarbij spellen zonder inzet worden getest. Dit biedt geen winstkansen, maar wel inzicht in spelmechanismen. Binnen dat spectrum blijft een 5 euro storting een aantrekkelijke optie als middenweg tussen risicoloos uitproberen en spelen met een groter budget.</p>
+
+                <h2>Verantwoord spelen met een klein budget</h2>
+                <p>Verantwoord spelen begint bij het instellen van duidelijke speellimieten, ook wanneer met lage inzetten wordt gespeeld. Een klein bedrag kan alsnog tot problemen leiden als verliezen worden nagejaagd of speeltijd niet wordt bewaakt. Het herkennen van signalen zoals steeds hogere inzetten of frustratie bij verlies is belangrijk, vooral voor nieuwe spelers.</p>
+                <p>Een lage storting biedt geen garantie tegen gokproblemen. Gedrag en zelfcontrole zijn bepalender dan het bedrag. Bij twijfel of verlies van controle is het verstandig om tijdig hulp te zoeken. In Nederland zijn er onafhankelijke instanties die ondersteuning bieden bij gokverslaving hulp en verantwoord speelgedrag.</p>
+
+                <div class="bg-slate-50 p-8 rounded-3xl mt-12">
+                    <h2 class="!mt-0">FAQ: 5 euro Deposit casino in Nederland</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Wat is een 5 euro Deposit casino?</h4>
+                            <p class="!mb-0">Een 5 euro Deposit casino is een online casino waar spelers kunnen beginnen met een minimale storting van €5. Dit type casino richt zich op spelers die met een klein budget willen spelen. Het biedt een laagdrempelige manier om een platform te testen zonder direct veel geld te riskeren.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Krijg ik een bonus bij een storting van €5?</h4>
+                            <p class="!mb-0">Bij een storting van 5 euro kan soms een bonus beschikbaar zijn, maar dit is niet altijd het geval. Het bonusbedrag is meestal beperkt en de voorwaarden kunnen strenger zijn dan bij hogere stortingen. Het controleren van de bonusvoorwaarden vooraf blijft daarom belangrijk.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Welke spellen kan ik spelen met €5?</h4>
+                            <p class="!mb-0">Met €5 kunnen Nederlandse spelers meestal slots met lage inzet spelen en soms geselecteerde tafel- of live spellen. Niet elk spel is geschikt voor een klein saldo. Spellen met een lage minimale inzet bieden doorgaans de meeste speelduur.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Zijn 5 euro casino’s legaal in Nederland?</h4>
+                            <p class="!mb-0">Alleen legale casino’s met een Nederlandse vergunning mogen zich officieel richten op spelers in Nederland. Casino’s zonder Nederlandse licentie vallen onder buitenlandse regelgeving. Dit kan gevolgen hebben voor toezicht en spelersbescherming.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Hoe snel kan ik uitbetalen na een kleine storting?</h4>
+                            <p class="!mb-0">Uitbetalen is vaak pas mogelijk wanneer het minimale opnamebedrag is bereikt. Daarnaast moet het account volledig zijn geverifieerd voordat een uitbetaling wordt verwerkt. De verwerkingstijd verschilt per casino en betaalmethode.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Is een minimale storting casino geschikt voor beginners?</h4>
+                            <p class="!mb-0">Een minimale storting casino is geschikt voor beginners die eerst ervaring willen opdoen. Het financiële risico blijft beperkt en het platform kan rustig worden verkend. Tegelijk blijven duidelijke regels en zelfcontrole belangrijk.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Kan ik meerdere keren €5 storten?</h4>
+                            <p class="!mb-0">Bij de meeste casino’s is het toegestaan om meerdere keren €5 te storten. Dit gebeurt binnen de vastgestelde stortings- en speellimieten van het account. Het is verstandig om deze limieten vooraf te controleren.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Conclusie: is een 5 euro Deposit casino de moeite waard?</h2>
+                <p>Een 5 euro Deposit casino biedt spelers de mogelijkheid om een online casino te testen met een lage storting en beperkt financieel risico. Deze aanpak is geschikt voor wie voorzichtig wil beginnen en eerst inzicht wil krijgen in het spelaanbod en de werking van het platform. Tegelijk gaan lage bedragen gepaard met beperkingen in bonussen, speelduur en uitbetalingsmogelijkheden.</p>
+                <p>Een bewuste keuze blijft belangrijk. Het controleren van de licentie, het lezen van voorwaarden en aandacht voor verantwoord spelen helpen om teleurstellingen te voorkomen. Met realistische verwachtingen blijft €5 vooral bedoeld voor entertainment en kennismaking. In dat kader vormt een kleine storting een aantrekkelijke optie, zolang voordelen en nadelen zorgvuldig worden afgewogen.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-slate-400 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 font-black text-2xl tracking-tighter text-primary mb-6">
+                        <i data-lucide="zap" class="fill-primary"></i>CASINO<span class="text-white">PRO</span>
+                    </div>
+                    <p class="mb-6">CasinoPro is uw vertrouwde bron voor de beste online gokreviews. Wij analyseren minimale stortingslimieten, uitbetalingssnelheden en bonusvoorwaarden om u te voorzien van de meest nauwkeurige gegevens.</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://www.begambleaware.org/sites/default/files/2020-07/BGA_Logo_White.png" class="h-6 opacity-70" alt="BeGambleAware">
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-600 flex items-center justify-center font-bold text-xs">18+</div>
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Snelle Links</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="hover:text-primary cursor-pointer">Beste Bonussen</li>
+                        <li class="hover:text-primary cursor-pointer">Nieuwe Casinos</li>
+                        <li class="hover:text-primary cursor-pointer">Betaalmethoden</li>
+                        <li class="hover:text-primary cursor-pointer">Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Juridisch</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="hover:text-primary cursor-pointer">Servicevoorwaarden</li>
+                        <li class="hover:text-primary cursor-pointer">Privacybeleid</li>
+                        <li class="hover:text-primary cursor-pointer">Cookiebeleid</li>
+                        <li class="hover:text-primary cursor-pointer">Affiliate Disclosure</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs tracking-wide uppercase font-bold">
+                <p>&copy; 2026 CasinoPro Affiliate Group. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-dark/95 backdrop-blur-md border-t border-slate-800 p-4 z-[60]">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-slate-300 text-sm text-center md:text-left">Wij gebruiken cookies om uw ervaring te verbeteren. Door onze site te gebruiken, gaat u akkoord met ons <a href="#" class="text-primary underline">Privacybeleid</a>.</p>
+            <div class="flex gap-4">
+                <button onclick="closeCookie()" class="bg-primary text-white px-8 py-2 rounded-full font-bold text-sm">IK ACCEPTEER</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        function closeCookie() { document.getElementById('cookie-banner').style.display = 'none' }
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.onclick = () => { mobileMenu.classList.toggle('hidden') };
+        function copyCode(btn) {
+            const code = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(code);
+            const originalText = btn.innerText;
+            btn.innerText = 'GEKOPIEERD!';
+            btn.classList.replace('bg-slate-800', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-600', 'bg-slate-800')
+            }, 2000)
+        }
+    </script>
+</body>
+</html>
